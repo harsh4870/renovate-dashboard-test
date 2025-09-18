@@ -3,7 +3,7 @@
   "onboarding": false,
   "requireConfig": "ignored",
   "repositories": [
-    "https://github.com/harsh4870/docker-tag-repo-test.git"
+    "harsh4870/docker-tag-repo-test.git"
   ],
   "enabledManagers": ["dockerfile"],
   "packageRules": [
