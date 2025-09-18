@@ -5,6 +5,9 @@ on:
     branches: [ "main" ]
   workflow_dispatch:     # allow manual trigger
 
+env:
+  LOG_LEVEL: debug
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
