@@ -1,24 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
-
+  "onboarding": false,
+  "requireConfig": "ignored",
   "repositories": [
     "https://github.com/harsh4870/docker-tag-repo-test.git"
   ],
-
   "enabledManagers": ["dockerfile"],
-  "docker": {
-    "enabled": true
-  },
   "packageRules": [
     {
+      "matchManagers": ["dockerfile"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchDatasources": ["docker"],
       "extractVersion": "^(?<version>.*)$",
       "versioning": "loose",
-      "commitMessageTopic": "docker image {{depName}}",
-      "groupName": "Docker Image Updates"
+      "commitMessageTopic": "base image {{depName}}",
+      "groupName": "Base Image Updates"
     },
     {
+      "matchManagers": ["dockerfile"],
       "matchDatasources": ["docker"],
       "pinDigests": true
     }
